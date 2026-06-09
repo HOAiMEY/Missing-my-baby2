@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Home To My Baby ❤️</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff5f8f,#ff9dbb,#ffd6e7);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+.container{padding:40px 20px;}
+.card{
+max-width:850px;
+margin:auto;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:25px;
+}
+h1{font-size:3rem;}
+button{
+padding:15px 30px;
+border:none;
+border-radius:999px;
+cursor:pointer;
+font-size:18px;
+}
+#letter{display:none;}
+.heart{
+position:fixed;
+font-size:24px;
+animation:float 8s linear infinite;
+}
+@keyframes float{
+from{transform:translateY(100vh);}
+to{transform:translateY(-120px);}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="card">
+<h1>❤️ My Baby, I'm Coming Home ❤️</h1>
+
+<p>
+It's been a month since I've been away from you, and every single day
+has reminded me of how much you mean to me.
+</p>
+
+<p>
+I miss your smile. I miss your voice.
+I miss disturbing you. I miss being close enough to hold you.
+</p>
+
+<p>
+The good news is that the wait is almost over...
+</p>
+
+<button onclick="openLetter()">Open My Heart ❤️</button>
+
+<div id="letter">
+<h2>💌 For My Beautiful Baby</h2>
+
+<p>
+My love,
+</p>
+
+<p>
+Distance has made me realize even more how special you are.
+Not a day passes without me thinking about you.
+</p>
+
+<p>
+Very soon, I will be close by again.
+Close enough to hold your hand.
+Close enough to hug you tightly.
+Close enough to look into your eyes and remind you how much I love you.
+</p>
+
+<p>
+Please keep one of your sweetest smiles for me,
+because I'm coming to see my baby soon.
+</p>
+
+<p>
+And when I finally see you,
+the first thing I'm doing is giving you the deepest hug ever. ❤️
+</p>
+
+<h3>Forever Yours ❤️</h3>
+<h2>Hussein</h2>
+</div>
+
+<p style="margin-top:30px;">
+🎵 Add your favorite MP3 file and rename it <b>music.mp3</b> in the same GitHub folder.
+The music will play automatically.
+</p>
+
+<audio controls autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+</div>
+
+<script>
+function openLetter(){
+ document.getElementById('letter').style.display='block';
+}
+
+function createHeart(){
+ let h=document.createElement('div');
+ h.className='heart';
+ h.innerHTML='❤️';
+ h.style.left=Math.random()*100+'vw';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),8000);
+}
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
